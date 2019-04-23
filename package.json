@@ -1,0 +1,31 @@
+{
+  "name": "express-jsonapi-controller",
+  "version": "1.0.0",
+  "description": "Generic Base Controller for express to generate JSON API response",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatinkatyal13/express-jsonapi-controller.git"
+  },
+  "keywords": [
+    "Express",
+    "JSON",
+    "API",
+    "controller"
+  ],
+  "author": "Jatin Katyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatinkatyal13/express-jsonapi-controller/issues"
+  },
+  "homepage": "https://github.com/jatinkatyal13/express-jsonapi-controller#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "i": "^0.3.6",
+    "jsonapi-serializer": "^3.6.4",
+    "ramda": "^0.26.1"
+  }
+}
