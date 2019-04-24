@@ -2,10 +2,7 @@
 
 module.exports = (included, config) => {
   return {
-    attributes: [
-      'firstName',
-      'lastName'
-    ],
+    attributes: ['firstName', 'lastName'],
     ...config
-  }
-}
+  };
+};
