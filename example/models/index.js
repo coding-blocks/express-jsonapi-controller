@@ -1,11 +1,11 @@
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
-  dialect: "sqlite",
-  storage: "./database.sqlite"
+  dialect: 'sqlite',
+  storage: './database.sqlite'
 });
 
-const User = sequelize.define("user", {
+const User = sequelize.define('user', {
   // attributes
   firstName: {
     type: Sequelize.STRING,
@@ -19,4 +19,4 @@ const User = sequelize.define("user", {
 module.exports = {
   sequelize,
   User
-}
+};
