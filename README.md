@@ -16,7 +16,7 @@ const UserSerializer = require('./serializers/user')
 
 // Get the controller
 const { Controller } = require('express-jsonapi-controller')
-const MyController = require(
+const MyController = new Controller(
   DB.User, // Model you want to create controller instance for
   DB, // Models import for getting related models
   UserSerializer
