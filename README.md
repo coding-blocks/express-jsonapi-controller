@@ -3,7 +3,11 @@ Base controller class for express apps to create JSON:API endpoints for sequeliz
 
 ## Installation
 ```sh
+<<<<<<< HEAD
 yarn add jatinkatyal13/express-jsonapi-controller
+=======
+yarn add @coding-blocks/express-jsonapi-controller
+>>>>>>> 4ab93de... initial commit
 ```
 
 ## Usage
