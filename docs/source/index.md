@@ -1,13 +1,11 @@
+title: Express JSON:API Controller Documentation
+---
 # Express JSON:API Controller
 Base controller class for express apps to create JSON:API endpoints for sequelize models
 
 ## Installation
 ```sh
-<<<<<<< HEAD
-yarn add jatinkatyal13/express-jsonapi-controller
-=======
 yarn add @coding-blocks/express-jsonapi-controller
->>>>>>> 4ab93de... initial commit
 ```
 
 ## Usage
