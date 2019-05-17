@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint index.js example lib",
-    "lint:fix": "eslint index.js example lib --fix"
+    "lint:fix": "eslint index.js example lib --fix",
+    "docs": "cd docs && hexo deploy -g"
   },
   "repository": {
     "type": "git",
