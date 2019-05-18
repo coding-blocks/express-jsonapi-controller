@@ -1,0 +1,11 @@
+# Include/Exclude Files/Folders
+include:
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
+  
+exclude:
+  - "example/**/*.js"
+  
+  # Do not use this to exclude posts or .md files in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.

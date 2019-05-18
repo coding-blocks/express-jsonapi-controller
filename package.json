@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint index.js example lib",
-    "lint:fix": "eslint index.js example lib --fix"
+    "lint:fix": "eslint index.js example lib --fix",
+    "gen_docs": "./node_modules/hexo/bin/hexo generate"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,9 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "hexo": "^3.8.0",
+    "hexo-cli": "^1.1.0"
   },
   "eslintIgnore": [
     "node_modules/"
