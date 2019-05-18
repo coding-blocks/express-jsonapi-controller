@@ -1,14 +1,10 @@
+language: node_js
 node_js:
-    - "10"
-before_script:
-   - npm install
-script: npm run docs 
+- 10
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  local_dir: /docs/public
-  on:
-    branch: docs
+
+install: yarn install
+
+
+script:
+  - bash ./scripts/deploy-to-gh-pages.sh
