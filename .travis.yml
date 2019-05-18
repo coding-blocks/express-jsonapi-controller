@@ -1,0 +1,13 @@
+dist: trusty
+
+language: node_js
+ node_js: "stable"
+
+install:
+    - yarn install
+
+env:
+  # add env variables here
+
+script:
+    - yarn run test
