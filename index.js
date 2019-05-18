@@ -1,10 +1,12 @@
 'use-strict'
 
 module.exports = {
-<<<<<<< HEAD
+
   Controller: require('./lib/controllerFactory'),
-=======
+
   Controller: require('./lib/baseController'),
->>>>>>> 4ab93de... initial commit
+
+  Controller: require('./lib/baseController'),
+
   utils: require('./lib/util')
 }

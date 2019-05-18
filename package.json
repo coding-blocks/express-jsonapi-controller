@@ -1,9 +1,11 @@
 {
-<<<<<<< HEAD
+
   "name": "express-jsonapi-controller",
-=======
+
   "name": "@coding-blocks/express-jsonapi-controller",
->>>>>>> 4ab93de... initial commit
+
+  "name": "@coding-blocks/express-jsonapi-controller",
+
   "version": "1.0.0",
   "description": "Generic Base Controller for express to generate JSON API response",
   "main": "index.js",
@@ -18,11 +20,13 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
+
     "url": "git+https://github.com/jatinkatyal13/express-jsonapi-controller.git"
-=======
+
     "url": "git+https://github.com/coding-blocks/express-jsonapi-controller.git"
->>>>>>> 4ab93de... initial commit
+
+    "url": "git+https://github.com/coding-blocks/express-jsonapi-controller.git"
+
   },
   "keywords": [
     "Express",
@@ -30,14 +34,22 @@
     "API",
     "controller"
   ],
-<<<<<<< HEAD
+
   "author": "Jatin Katyal",
   "license": "ISC",
+
+  "author": "Abhishek Gupta <hi@itsabhishek.me> (http://itsabhishek.me)",
+  "contributors": [
+    "Jatin Katyal <jatin.katyal13@gmail.com>"
+  ],
+  "license": "GPLv3",
+
   "bugs": {
-    "url": "https://github.com/jatinkatyal13/express-jsonapi-controller/issues"
+    "url": "https://github.com/coding-blocks/express-jsonapi-controller/issues"
   },
+
   "homepage": "https://github.com/jatinkatyal13/express-jsonapi-controller#readme",
-=======
+
   "author": "Abhishek Gupta <hi@itsabhishek.me> (http://itsabhishek.me)",
   "contributors": [
     "Jatin Katyal <jatin.katyal13@gmail.com>"
@@ -47,7 +59,9 @@
     "url": "https://github.com/coding-blocks/express-jsonapi-controller/issues"
   },
   "homepage": "https://github.com/coding-blocks/express-jsonapi-controller#readme",
->>>>>>> 4ab93de... initial commit
+
+  "homepage": "https://github.com/coding-blocks/express-jsonapi-controller#readme",
+
   "dependencies": {
     "assert": "^1.4.1",
     "i": "^0.3.6",
