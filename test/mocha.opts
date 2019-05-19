@@ -1,0 +1,7 @@
+###
+### mocha.opts
+###
+
+--timeout 2000
+--exit
+test/*.spec.js
