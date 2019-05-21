@@ -1,10 +1,17 @@
+
+dist: trusty
+
 language: node_js
-node_js:
-- 10
+node_js: "stable"
 
+install:
+    - yarn install
 
-install: yarn install
-
+env:
+  # add env variables here
 
 script:
-  - bash ./scripts/deploy-to-gh-pages.sh
+    - bash ./scripts/deploy.sh
+    - yarn run test
+
+
