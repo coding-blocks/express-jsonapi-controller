@@ -1,7 +1,7 @@
 dist: trusty
 
 language: node_js
- node_js: "stable"
+node_js: "stable"
 
 install:
     - yarn install
