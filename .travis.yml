@@ -13,5 +13,3 @@ env:
 script:
     - bash ./scripts/deploy.sh
     - yarn run test
-
-

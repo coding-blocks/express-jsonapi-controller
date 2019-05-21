@@ -23,5 +23,3 @@ theme: ../node_modules/hexo-theme-doc
 
 theme_config:
   favicon: ../docs/images/favicon.ico
-
-
