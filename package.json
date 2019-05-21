@@ -22,7 +22,7 @@
   "contributors": [
     "Jatin Katyal <jatin.katyal13@gmail.com>"
   ],
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/coding-blocks/express-jsonapi-controller/issues"
   },
