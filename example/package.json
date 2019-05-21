@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jatin Katyal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sequelize": "^5.7.4",
+    "sqlite3": "^4.0.6"
+  }
+}
