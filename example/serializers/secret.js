@@ -6,7 +6,7 @@ module.exports = (included, type, config) => {
   if (type === 'deserialize') {
     return {
       keyForAttribute: 'snake_case',
-      secrets: {
+      user: {
         valueForRelationship (relationship) {
           return {
             id: relationship.id
@@ -17,8 +17,8 @@ module.exports = (included, type, config) => {
   }
 
   return {
-    attributes: ['firstName', 'lastName', 'secrets'],
-    secrets: {
+    attributes: ['text', 'user'],
+    user: {
       ref: 'id',
       included: true
     },

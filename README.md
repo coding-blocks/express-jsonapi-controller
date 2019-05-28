@@ -46,6 +46,7 @@ module.exports = (included, type, config) => {
 
 ## Available Methods
 - ``` Controller.handleQuery() ```
+- ``` Controller.handleCreate() ```
 - ``` Controller.handleQueryById() ```
 - ``` Controller.handleUpdateById() ```
 - ``` Controller.handleDeleteById() ```

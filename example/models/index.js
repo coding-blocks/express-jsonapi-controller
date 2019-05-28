@@ -16,7 +16,18 @@ const User = sequelize.define('user', {
   }
 })
 
+const Secret = sequelize.define('secret', {
+  text: {
+    type: Sequelize.TEXT,
+    allowNull: false
+  }
+})
+
+Secret.belongsTo(User)
+User.hasMany(Secret)
+
 module.exports = {
   sequelize,
+  Secret,
   User
 }
