@@ -83,5 +83,5 @@ theme_config:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git 
-  repo: https://github.com/muskankhedia/express-jsonapi-controller
+  repo: https://github.com/coding-blocks/express-jsonapi-controller
   branch: gh-pages
