@@ -3,11 +3,27 @@ dist: trusty
 language: node_js
 node_js: "stable"
 
+branches:
+  only:
+  - master
+
+before_install:
+  - npm install -g hexo
+  - npm install
+
 install:
     - yarn install
-
+    - hexo generate 
 env:
   # add env variables here
 
 script:
     - yarn run test
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
