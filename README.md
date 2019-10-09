@@ -1,4 +1,6 @@
 # Express JSON:API Controller
+[![Build Status](https://travis-ci.org/coding-blocks/express-jsonapi-controller.svg?branch=master)](https://travis-ci.org/coding-blocks/express-jsonapi-controller) [![GNU license](https://img.shields.io/github/license/coding-blocks/express-jsonapi-controller)](https://github.com/coding-blocks/express-jsonapi-controller/blob/master/LICENSE.md)
+
 Base controller class for express apps to create JSON:API endpoints for sequelize models
 
 ## Installation
