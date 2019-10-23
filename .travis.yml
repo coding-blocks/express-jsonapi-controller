@@ -8,7 +8,7 @@ install:
 
 env:
   # add env variables here
-  
+
 script:
     - yarn run docs
     - yarn run test
