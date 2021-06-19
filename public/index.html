@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    <title>Express JSON:API Controller | Express JSON:API Controller Documentation </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/../docs/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"Express JSON:API Controller Documentation","path":"index.html"},"data":{"navigation":{"logo":{"text":"Express JSON:API Controller","type":"link","path":"index.html"},"main":[{"text":"SUPPORT AND FEEDBACK","type":"label"},{"text":"Raise an Issue on Github","type":"link","path":"https://github.com/coding-blocks/express-jsonapi-controller"}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"../docs/images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Express JSON:API Controller</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="Express-JSON-API-Controller"><a href="#Express-JSON-API-Controller" class="headerlink" title="Express JSON:API Controller"></a>Express JSON:API Controller</h1><p>Base controller class for express apps to create JSON:API endpoints for sequelize models</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add @coding-blocks/express-jsonapi-controller</span><br></pre></td></tr></table></figure>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import your sequelize models</span></span><br><span class="line"><span class="keyword">const</span> DB = <span class="built_in">require</span>(<span class="string">'./models'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// import serializer for your model</span></span><br><span class="line"><span class="keyword">const</span> UserSerializer = <span class="built_in">require</span>(<span class="string">'./serializers/user'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get the controller</span></span><br><span class="line"><span class="keyword">const</span> &#123; Controller &#125; = <span class="built_in">require</span>(<span class="string">'express-jsonapi-controller'</span>)</span><br><span class="line"><span class="keyword">const</span> MyController = <span class="keyword">new</span> Controller(</span><br><span class="line">  DB.User, <span class="comment">// Model you want to create controller instance for</span></span><br><span class="line">  DB, <span class="comment">// Models import for getting related models</span></span><br><span class="line">  UserSerializer</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Create your endpoints</span></span><br><span class="line">router.get(<span class="string">'/'</span>, MyController.handleQuery)</span><br></pre></td></tr></table></figure>
+<h2 id="Creating-Serializers"><a href="#Creating-Serializers" class="headerlink" title="Creating Serializers"></a>Creating Serializers</h2><p>We use jsonapi-serializer for serializing models<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">export a function with following arguments</span></span><br><span class="line"><span class="comment">@params [included] included models config</span></span><br><span class="line"><span class="comment">@params [type] serialize or deserialize</span></span><br><span class="line"><span class="comment">@params [config] meta config</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">included, type, config</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    attributes: [<span class="string">'firstName'</span>, <span class="string">'lastName'</span>],</span><br><span class="line">    ...config</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Available-Methods"><a href="#Available-Methods" class="headerlink" title="Available Methods"></a>Available Methods</h2><ul>
+<li><figure class="highlight plain"><figcaption><span>```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- ``` Controller.handleQueryById()</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><figcaption><span>```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- ``` Controller.handleDeleteById()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>

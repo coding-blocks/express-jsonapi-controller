@@ -1,0 +1,19 @@
+{
+  "logo": {
+    "text": "Express JSON:API Controller",
+    "type": "link",
+    "path": "index.html"
+  },
+  "main": [
+    
+    {
+      "text": "SUPPORT AND FEEDBACK",
+      "type": "label"
+    },
+    {
+      "text": "Raise an Issue on Github",
+      "type": "link",
+      "path": "https://github.com/coding-blocks/express-jsonapi-controller"
+    }
+  ]
+}
